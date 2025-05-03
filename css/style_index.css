@@ -1,0 +1,188 @@
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light background to contrast sidebar */
+    background-image:   url('img/assets/BG.png');
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #343a40 !important; /* Ensure background stays dark */
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.sidebar .profile h4 {
+    margin-top: 10px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #495057;
+}
+
+.content {
+    margin-left: 250px; /* Matches sidebar width */
+    padding: 60px;
+    width: calc(100% - 250px);
+    background-color: #ffffff; /* Ensure content area has a proper background */
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.card {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.table thead {
+    background-color: #212529;
+    color: white;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.header-pink {
+    background-color: #f8f9fa; /* Light background for contrast */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.header-pink img {
+    max-width: 40px; /* Set a consistent size */
+    height: auto;
+}
+
+/* Make sure the text aligns properly */
+.header-pink h6 {
+    font-size: 16px;
+    margin: 0;
+    white-space: nowrap; /* Prevent text from breaking into multiple lines */
+}
+
+/* Table container to prevent overflow */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Table adjustments for better fit */
+.table {
+    width: 100%;
+    table-layout: auto; /* Allows automatic column sizing */
+}
+
+.table th, 
+.table td {
+    white-space: nowrap; /* Prevents text wrapping inside cells */
+    margin-inline-end: auto;
+    padding: Auto; /* Adjust padding for better spacing */
+    padding-block: 10px; /* Vertical padding */
+    text-align: center;
+
+}
+
+/* Ensure buttons fit within the table */
+.table td button {
+    padding: 5px 8px;
+    font-size: 12px;
+}
+
+.dept-card {
+    text-decoration: none;
+    color: black;
+}
+
+.dept-card .card {
+    transition: 0.3s;
+}
+
+.dept-card:hover .card {
+    background-color: #f8f9fa;
+    transform: scale(1.05);
+}
+
+.dept-icon {
+    font-size: 40px;
+    color: #2c3e50;
+}
+
+.add-dept {
+    background-color: #f1f1f1;
+    border: 2px dashed #2c3e50;
+}
+
+.add-dept:hover {
+    background-color: #e0e0e0;
+}
+
+.required::after {
+    content: " *";
+    color: red;
+}
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.login-container {
+    height: 100vh;
+}
+.login-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.login-left {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+@media (max-width: 768px) {
+    .login-left {
+        display: none; /* Hide left side on small screens */
+    }
+}
